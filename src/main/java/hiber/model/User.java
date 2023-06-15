@@ -27,6 +27,17 @@ public class User {
       this.email = email;
    }
 
+   @OneToOne(optional = false, mappedBy = "user")
+   public Car car;
+
+   public Car getCar() {
+      return car;
+   }
+
+   public void setCar(Car car) {
+      this.car = car;
+   }
+
    public Long getId() {
       return id;
    }
